@@ -1,0 +1,12 @@
+logs:
+  build: .
+  links:
+    - server
+  volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
+  command: -h server -n local -p 28777
+server:
+  image: temal/logio-server
+  ports:
+    - "28777:28777"
+    - "28778:28778"
