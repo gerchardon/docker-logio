@@ -8,7 +8,7 @@ and see it to http://localhost:28778
 ### Docker Compose
 
 ```
-echo >docker-compose.yml <<EOF
+cat >docker-compose.yml <<EOF
 logs:
   image: gerchardon/docker-logio
   links:

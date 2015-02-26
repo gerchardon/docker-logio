@@ -14,5 +14,8 @@
     "docker-allcontainers": "^0.1.2",
     "docker-loghose": "^0.3.1",
     "through2": "^0.6.3"
+  },
+  "bin": {
+    "docker-logio": "./index.js"
   }
 }
