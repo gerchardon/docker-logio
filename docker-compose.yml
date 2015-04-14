@@ -5,6 +5,7 @@ logs:
   volumes:
     - /var/run/docker.sock:/var/run/docker.sock
   command: -h server -n local -p 28777
+  privileged: true
 server:
   image: temal/logio-server
   ports:
