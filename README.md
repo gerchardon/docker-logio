@@ -29,7 +29,7 @@ docker-compose up
 
 ```
 docker run -d --name logio -p 28777:28777 -p 28778:28778 temal/logio-server
-docker run -d --privileged --link logio:logio -v /var/run/docker.sock:/var/run/docker.sock gerchardon/docker-logio -n `uname -n` -h logio
+docker run -d --link logio:logio -v /var/run/docker.sock:/var/run/docker.sock gerchardon/docker-logio -n `uname -n` -h logio
 ```
 
 ## Usage as CLI
