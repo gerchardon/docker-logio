@@ -38,12 +38,10 @@ loghose(opts).pipe(through.obj(function(chunk, enc, cb){
 })).pipe(s);
 
 ee.on('start', function(meta, container) {
-  container.inspect(function (err, data) {
-    s.write('+node|'+program.name+':'+data.Name+'|'+meta.image+'\r\n');
-  });
+  var id = meta.id.substring(0, 12);
+  s.write('+node|'+program.name+':'+id+'|'+meta.image+'\r\n');
 });
 ee.on('stop', function(meta, container) {
-  container.inspect(function (err, data) {
-    s.write('-node|'+program.name+':'+data.Name+'\r\n');
-  });
+  var id = meta.id.substring(0, 12);
+  s.write('-node|'+program.name+':'+id+'\r\n');
 });

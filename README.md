@@ -16,6 +16,7 @@ logs:
   volumes:
    - /var/run/docker.sock:/var/run/docker.sock
   command: -h logio -n docker
+  privileged: true
 logio:
   image: temal/logio-server
   ports:
