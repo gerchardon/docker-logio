@@ -31,7 +31,10 @@ docker-compose up
 ```
 docker run -d --name logio -p 28777:28777 -p 28778:28778 temal/logio-server
 docker run -d --privileged --link logio:logio -v /var/run/docker.sock:/var/run/docker.sock gerchardon/docker-logio -n `uname -n` -h logio
+docker run -it -d -p 8000:8000 python:3.5-slim python -m http.server
 ```
+
+See LogIo http://localhost:28778 and generate app log with http://localhost:8000
 
 ## Usage as CLI
 
